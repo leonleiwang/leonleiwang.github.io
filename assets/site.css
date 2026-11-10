@@ -156,6 +156,8 @@ main { flex: 1; }
   letter-spacing: -.045em;
 }
 
+html[lang="en"] .nameplate h1 { font-size: clamp(45px, 6.4vw, 50px); }
+
 .role {
   display: flex;
   align-items: center;

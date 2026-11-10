@@ -419,6 +419,7 @@ main { flex: 1; }
   .wordmark { font-size: 15px; }
   .home-main { padding: 4px 16px 28px; }
   .nameplate { padding: 72px 32px 60px; }
+  html[lang="en"] .nameplate h1 { font-size: clamp(30px, 10vw, 45px); }
   .wire-caption { padding: 0 6px; font-size: 8px; }
   .role { font-size: clamp(12px, 3.5vw, 15px); }
   .intro { font-size: 13px; }

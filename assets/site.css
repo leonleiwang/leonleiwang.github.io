@@ -270,6 +270,15 @@ html[lang="en"] .nameplate h1 { font-size: clamp(45px, 6.4vw, 50px); }
 
 .home-footer .motto { grid-column: 3; justify-self: end; }
 
+.versions-link {
+  display: block;
+  width: fit-content;
+  margin-top: 3px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
 .game-launch,
 .inline-game button {
   border: 0;

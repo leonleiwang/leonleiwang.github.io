@@ -12,5 +12,5 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 站点由 GitHub Pages 从 `main` 分支的 **/ (root)** 发布。
 
-早期预览保存在 [A](versions/a.html)、[B](versions/b.html) 和 [C](versions/c.html)。每份 HTML 都可以单独下载并用浏览器打开。
+四个版本可在[版本页](https://leonleiwang.github.io/versions/)打开。每份 HTML 都可以单独下载并用浏览器打开。
 

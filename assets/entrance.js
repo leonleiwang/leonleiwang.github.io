@@ -84,7 +84,7 @@
     const paths = Array.from(wire.children).filter((element) => element.matches("path"));
     const launchDot = document.querySelector("[data-game-launch] circle");
     const inner = ".wire-caption, .nameplate h1, .role-display, .role-toggle, .intro span, .socials a > span";
-    const outer = ".wordmark, .site-nav a, .language > *, .home-footer > span";
+    const outer = ".wordmark, .site-nav a, .language > *, .home-footer > span, .home-footer > .versions-link";
     const elements = document.querySelectorAll(ripple ? inner : `${inner}, ${outer}`);
     const bands = ripple ? Array.from(document.querySelectorAll(".site-header, .home-footer"), (element) => {
       const box = element.getBoundingClientRect();

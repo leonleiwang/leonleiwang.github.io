@@ -22,6 +22,16 @@
 
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
+  function onScreen(target) {
+    if (target.wire) {
+      const { from, to } = target;
+      return Math.max(from.x, to.x) > 0 && Math.min(from.x, to.x) < width &&
+        Math.max(from.y, to.y) > 0 && Math.min(from.y, to.y) < height;
+    }
+    return target.x + target.width > 0 && target.x < width &&
+      target.y + target.height > 0 && target.y < height;
+  }
+
   function textTargets() {
     const result = [];
     const selector = ".wire-caption, h1, [data-role-text], .intro span, .socials a > span:not(.social-icon)";
@@ -247,7 +257,7 @@
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
 
     origin = nameplate.getBoundingClientRect();
-    targets = [...wireTargets(), ...textTargets()];
+    targets = [...wireTargets(), ...textTargets()].filter(onScreen);
     const footerButton = launch.getBoundingClientRect();
     paddle.y = clamp(footerButton.top + footerButton.height / 2 + 3, height - 72, height - 28);
     movePaddle(width / 2);
